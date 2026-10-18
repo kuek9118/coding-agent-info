@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Coding Agent Backup — 隐私政策</title><link rel="stylesheet" href="style.css"></head>
+<body><main>
+<p class="eyebrow">Coding Agent Backup · Privacy Policy</p><h1>隐私政策</h1>
+<p>生效日期：2026-10-18。本政策说明个人使用的 Coding Agent Backup 如何访问、使用、存储和处理 Google 用户数据。账号所有者自行运行和管理该应用；它不是 Google 或 OpenAI 提供的备份服务。</p>
+<h2>访问的数据与用途</h2>
+<p>应用仅请求 Google Drive 的 <code>drive.file</code> 范围，访问本应用创建或由用户明确授权给本应用的文件及其元数据。处理的数据包括文件夹和文件标识、名称、大小、版本及完整性校验值，用于上传、定位、校验和下载备份。应用不请求全盘搜索、Gmail、Google Photos 或通讯录权限。</p>
+<p>保存的业务内容包括控制数据库与已配置仓库的加密备份和对应签名清单。所有者还可单独启用 Codex 自动化：一份新授权的专用 Codex 登录状态会先加密，再存入所有者自己的 Drive；可信后台短暂解密后调用官方客户端，并将刷新后的状态重新加密保存。这份授权与 Google Drive 授权相互独立。</p>
+<h2>授权与保存位置</h2>
+<p>Google 登录与同意在 Google 官方页面完成。应用接收专用 OAuth 授权，不读取或保存用户的 Google 密码、两步验证码或 Google 账号恢复码。Desktop 客户端配置与后台 refresh token 保存在所有者的 Windows 用户目录，并可按本人选择保存至私有控制仓库的 GitHub Actions Secrets；文件夹和加密文件标识保存为仓库配置。</p>
+<p>备份密文与清单保存在所有者的 Google Drive。备份解密私钥由所有者在本机或离线介质保管，不上传至普通后台任务或 Drive。专用 Codex 状态使用独立密钥加密；其密钥可以保存在所有者的 GitHub Actions Secrets。加密不消除本机、云账户或可信运行环境被攻破的风险。</p>
+<h2>服务提供商与共享</h2>
+<p>Google 为 Drive 与 OAuth 提供基础服务，GitHub 为所有者的配置与后台任务提供基础服务。本人选择 Codex 自动化后，专用 Codex 认证由官方客户端用于 OpenAI 服务。编码执行器不接收 Google OAuth 凭据；这份 Drive 客户端不会把文件交给编码模型作为上下文。项目代码向模型发送另由所有者的独立项目与模型授权控制。</p>
+<p>应用不出售 Google 用户数据，不用于广告，不使用 Google Drive 用户数据训练或改进通用 AI 模型。对 Google API 数据的使用遵守 <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>，包括适用的 Limited Use 要求。</p>
+<h2>保留、删除与撤销</h2>
+<p>当前没有自动删除旧备份的规则。备份会保留到所有者在 Drive 中删除；如需永久移除，还需按 Google 提供的方式清空回收站。所有者可以在 <a href="https://myaccount.google.com/connections">Google 账号连接设置</a>中撤销应用授权，并删除本机配置与相关 GitHub Secrets/Variables。撤销授权会阻止后续访问，不会自动删除此前已上传的备份或其他服务已保存的副本。</p>
+<p>专用 Codex 登录可单独撤销或重新授权；更换认证时应处理不再需要的旧加密状态文件。平台日志、回收站和服务商的后台保留由各提供商政策管理，应用不能保证立即清除所有副本。</p>
+<h2>网页与联系</h2>
+<p>本说明网页没有分析脚本、跟踪像素或登录表单；托管服务商仍可能记录 IP 地址等请求信息。联系应用所有者，请使用 Google 授权页面列出的支持邮箱。</p>
+<nav aria-label="政策"><a href="index.html">应用首页</a><a href="terms.html">使用说明 / Terms</a></nav>
+</main></body></html>

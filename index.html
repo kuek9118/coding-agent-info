@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Coding Agent Backup — 应用说明</title><link rel="stylesheet" href="style.css"></head>
+<body><main>
+<p class="eyebrow">个人使用 · 应用说明</p>
+<h1>Coding Agent Backup</h1>
+<p>为账号所有者自己的 Coding Agent 控制系统提供 Google Drive 备份授权。Windows 授权助手通过 Google 官方页面取得本人同意；临时 GitHub Actions runner 随后保存和取回本应用获准访问的备份文件。</p>
+<h2>应用用途</h2>
+<ul><li>保存控制数据库与已配置 Git 仓库的加密备份及签名清单。</li><li>在所有者明确启用后，保存一份单独授权并加密的 Codex 登录状态，供可信后台恢复与官方客户端刷新。</li><li>由所有者检查备份、执行恢复或撤销授权。应用不要求 Google Cloud 服务器或试用额度。</li></ul>
+<h2>Google Drive 权限</h2>
+<p>应用只请求 <code>https://www.googleapis.com/auth/drive.file</code>，用于本应用创建或由所有者明确授权给本应用的文件；不申请全盘读取权限。普通备份程序按固定流程调用 Drive API，不向编码模型提供 Google OAuth 凭据。</p>
+<h2>使用者与联系</h2>
+<p>本应用当前仅供所有者个人使用。支持联系方式为 Google 授权页面显示的支持邮箱。本网页只提供应用和数据处理说明，不接受密码、验证码、访问令牌或备份上传。</p>
+<p lang="en">Coding Agent Backup is a personal-use application for encrypted backups and separately authorized encrypted automation state in Google Drive. It requests only the drive.file scope and uses Google's official user-consent flow.</p>
+<nav aria-label="政策"><a href="privacy.html">隐私政策 / Privacy</a><a href="terms.html">使用说明 / Terms</a></nav>
+<footer>更新于 2026-10-18 · 本页面不包含控制系统源码、项目数据或授权凭据。</footer>
+</main></body></html>
